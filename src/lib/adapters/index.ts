@@ -17,6 +17,10 @@ import { NebulanceAdapter } from "./nebulance"
 import { TorrentleechAdapter } from "./torrentleech"
 import type { FetchOptions, TrackerAdapter } from "./types"
 import { Unit3dAdapter } from "./unit3d"
+import { Tr4kerAdapter } from "./tr4ker"
+import { C411Adapter } from "./c411"
+import { YggRebornAdapter } from "./yggreborn"
+import { V3xAdapter } from "./v3x"
 
 export type { PlatformType } from "./constants"
 export { DEFAULT_API_PATHS, VALID_PLATFORM_TYPES } from "./constants"
@@ -36,6 +40,10 @@ const adapters: Record<string, TrackerAdapter> = {
   nebulance: new NebulanceAdapter(),
   torrentleech: new TorrentleechAdapter(),
   unit3d: new Unit3dAdapter(),
+  tr4ker: new Tr4kerAdapter(),
+  c411: new C411Adapter(),
+  yggreborn: new YggRebornAdapter(),
+  v3x: new V3xAdapter(),
 }
 
 export function getAdapter(platformType: string): TrackerAdapter {

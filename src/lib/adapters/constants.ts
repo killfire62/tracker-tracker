@@ -16,6 +16,10 @@ export const VALID_PLATFORM_TYPES = [
   "hawke",
   "animebytes",
   "luminance",
+  "tr4ker",
+  "c411",
+  "yggreborn",
+  "v3x",
 ] as const
 export type PlatformType = (typeof VALID_PLATFORM_TYPES)[number]
 
@@ -36,4 +40,8 @@ export const DEFAULT_API_PATHS: Record<string, string> = {
   hawke: "/api/profile",
   animebytes: "/api/stats/personal",
   luminance: "/user.php",
+  tr4ker: "/api/me",
+  c411: "/api/auth/me",
+  yggreborn: "/account/",
+  v3x: "/auth/me",
 }

@@ -73,6 +73,9 @@ const LARGE_TOKEN_PLATFORMS: ReadonlySet<string> = new Set([
   "iptorrents",
   "luminance",
   "torrentleech",
+  "c411",
+  "yggreborn",
+  "v3x",
 ])
 
 export function maxTokenLengthFor(platform: string | null | undefined): number {

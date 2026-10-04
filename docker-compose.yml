@@ -11,7 +11,7 @@ name: tracker-tracker
 
 services:
   tracker-tracker-app:
-    image: ghcr.io/jordanlambrecht/tracker-tracker:latest
+    image: tracker-tracker:custom
     restart: unless-stopped
     container_name: tracker-tracker-app
     ports:
@@ -26,6 +26,7 @@ services:
       # is the only thing that can unlock them without your master password. Change it
       # and `tt-recover` can no longer get you back in after a lockout.
       SESSION_SECRET: ${SESSION_SECRET}
+      HOMEPAGE_TOKEN: ${HOMEPAGE_TOKEN}
       TZ: ${TZ}
       # LOG_LEVEL: ${LOG_LEVEL} # optional, defaults to 'info'
       # LOG_FILE: /data/logs/tracker-tracker.log # optional

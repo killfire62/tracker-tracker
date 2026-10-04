@@ -84,6 +84,10 @@ export const PLATFORM_CREDENTIAL_FIELDS: Partial<
   ],
   torrentleech: [{ id: "session_cookie", label: "Session cookie" }, PASSKEY_FIELD],
   luminance: [{ id: "username", label: "Username", secret: false }, PASSKEY_FIELD],
+  tr4ker: [{ id: "api_key", label: "API key" }, PASSKEY_FIELD],
+  c411: [{ id: "session_cookie", label: "Session cookie" }, PASSKEY_FIELD],
+  yggreborn: [{ id: "session_cookie", label: "Session cookie" }, PASSKEY_FIELD],
+  v3x: [{ id: "session_cookie", label: "Session cookie" }, PASSKEY_FIELD],
   // `custom` is deliberately absent. It falls through to the universal fallback,
   // which is the only honest default for a tracker we know nothing about.
 }

@@ -5,6 +5,11 @@ import type { TrackerRegistryEntry } from "@/data/tracker-registry"
 export * from "./720pier"
 export * from "./abtorrents"
 export * from "./aither"
+export * from "./c411"
+export * from "./tr4ker"
+export * from "./yggreborn"
+export * from "./g3minitracker"
+export * from "./v3x"
 export * from "./alpharatio"
 export * from "./animebytes"
 export * from "./animez"
@@ -60,6 +65,11 @@ export * from "./zenith"
 import { pier720 } from "./720pier"
 import { abtorrents } from "./abtorrents"
 import { aither } from "./aither"
+import { c411 } from "./c411"
+import { tr4ker } from "./tr4ker"
+import { yggreborn } from "./yggreborn"
+import { g3minitracker } from "./g3minitracker"
+import { v3x } from "./v3x"
 import { alpharatio } from "./alpharatio"
 import { animebytes } from "./animebytes"
 import { animez } from "./animez"
@@ -116,6 +126,11 @@ export const ALL_TRACKERS: TrackerRegistryEntry[] = [
   pier720,
   abtorrents,
   aither,
+  c411,
+  tr4ker,
+  yggreborn,
+  g3minitracker,
+  v3x,
   asiancinema,
   alpharatio,
   animebytes,
