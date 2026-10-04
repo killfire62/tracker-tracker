@@ -4,6 +4,24 @@
 
 [![Documentation](https://img.shields.io/badge/Documentation-→-00d4ff)](https://jordanlambrecht.github.io/tracker-tracker/)
 
+> [!NOTE]
+> ## 🇫🇷 Version française avec trackers francophones
+>
+> Ce fork (branche **`perso`**) est basé sur [Tracker Tracker](https://github.com/jordanlambrecht/tracker-tracker) et ajoute :
+>
+> - **Interface entièrement en français** : un dictionnaire (`src/i18n/fr.ts`) traduit l'interface à l'affichage, sans toucher aux composants d'origine, pour faciliter les mises à jour.
+> - **Trackers francophones pris en charge** avec des adaptateurs dédiés :
+>   - **C411** (cookie de session)
+>   - **TR4KER** (clé API)
+>   - **YGG Reborn** (cookie de session)
+>   - **G3mini TR4CK3R** (UNIT3D)
+>   - **V3X** (cookie de session)
+> - **API `/api/homepage`** en lecture seule (en-tête `X-Homepage-Token`) pour afficher les ratios dans [Homepage](https://gethomepage.dev).
+>
+> **Mise à jour automatique :** la version officielle est régulièrement récupérée et fusionnée dans la branche `perso`, puis l'image Docker est reconstruite et ce fork est mis à jour. En cas de conflit ou d'échec, rien n'est modifié et la version précédente continue de tourner.
+>
+> 🤖 Adaptateurs, traduction et automatisation réalisés avec [Claude](https://claude.ai) (Anthropic).
+
 <p align="center">
   <img src="public/img/trackerTracker_logo.svg" alt="Tracker Tracker" width="400" />
 </p>
