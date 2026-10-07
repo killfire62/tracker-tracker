@@ -368,7 +368,8 @@ function AddTrackerDialog({
       }
     } else if (
       selectedEntry?.platform === "torrentleech" ||
-      selectedEntry?.platform === "luminance"
+      selectedEntry?.platform === "luminance" ||
+      selectedEntry?.platform === "v3x"
     ) {
       if (!tlUsername.trim()) {
         next.apiToken = "Username is required"
@@ -398,7 +399,7 @@ function AddTrackerDialog({
     const isIptorrents = selectedEntry?.platform === "iptorrents"
     const isFilelist = selectedEntry?.platform === "filelist"
     const isTorrentleech = selectedEntry?.platform === "torrentleech"
-    const isLuminance = selectedEntry?.platform === "luminance"
+    const isLuminance = selectedEntry?.platform === "luminance" || selectedEntry?.platform === "v3x"
     let effectiveApiToken = apiToken
 
     if (isAvistaz) {
@@ -667,7 +668,8 @@ function AddTrackerDialog({
             )}
           </div>
         ) : selectedEntry?.platform === "torrentleech" ||
-          selectedEntry?.platform === "luminance" ? (
+          selectedEntry?.platform === "luminance" ||
+          selectedEntry?.platform === "v3x" ? (
           <div className="flex flex-col gap-3">
             <Input
               label={`${selectedEntry.name} Username`}

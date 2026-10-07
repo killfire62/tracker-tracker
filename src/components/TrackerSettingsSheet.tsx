@@ -194,7 +194,7 @@ function TrackerSettingsSheet({ open, tracker, onClose, onUpdated }: TrackerSett
       }
     } else if (
       changingKey &&
-      (tracker.platformType === "torrentleech" || tracker.platformType === "luminance")
+      (tracker.platformType === "torrentleech" || tracker.platformType === "luminance" || tracker.platformType === "v3x")
     ) {
       if (!editTlUsername.trim() || !editTlPassword) {
         validationErrors.apiToken = "Username and password are required"
@@ -234,7 +234,7 @@ function TrackerSettingsSheet({ open, tracker, onClose, onUpdated }: TrackerSett
         cookies: editFlCookies.trim().replace(/^Cookie:\s*/i, ""),
         userAgent: navigator.userAgent,
       })
-    } else if (changingKey && tracker.platformType === "luminance") {
+    } else if (changingKey && (tracker.platformType === "luminance" || tracker.platformType === "v3x")) {
       trimmedToken = JSON.stringify({ username: editTlUsername.trim(), password: editTlPassword })
     } else if (changingKey && tracker.platformType === "torrentleech") {
       const alt2FAToken = editTlAlt2FAToken.trim()
@@ -473,7 +473,7 @@ function TrackerSettingsSheet({ open, tracker, onClose, onUpdated }: TrackerSett
                 />
               </div>
             ) : changingKey &&
-              (tracker.platformType === "torrentleech" || tracker.platformType === "luminance") ? (
+              (tracker.platformType === "torrentleech" || tracker.platformType === "luminance" || tracker.platformType === "v3x") ? (
               <div className="flex flex-col gap-2">
                 <Input
                   label="Username"
